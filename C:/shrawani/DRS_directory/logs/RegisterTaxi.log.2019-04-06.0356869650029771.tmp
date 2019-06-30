@@ -1,0 +1,61 @@
+2019-04-09 15:26:29.202  INFO 24217 --- [main] c.m.r.RegisterTaxiClientApplication      : Starting RegisterTaxiClientApplication on cec-ben214-03 with PID 24217 (/home/silwals/Documents/code/RegisterTaxiClient/target/classes started by silwals in /home/silwals/Documents/code/RegisterTaxiClient)
+2019-04-09 15:26:29.207  INFO 24217 --- [main] c.m.r.RegisterTaxiClientApplication      : No active profile set, falling back to default profiles: default
+2019-04-09 15:26:29.880  INFO 24217 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$a5caeea8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-09 15:26:30.168  INFO 24217 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2019-04-09 15:26:30.198  INFO 24217 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-09 15:26:30.198  INFO 24217 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-04-09 15:26:30.209  INFO 24217 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-04-09 15:26:30.290  INFO 24217 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-09 15:26:30.290  INFO 24217 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1042 ms
+2019-04-09 15:26:30.540  INFO 24217 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-09 15:26:30.845 ERROR 24217 --- [main] org.apache.catalina.util.LifecycleBase   : Failed to start component [Connector[HTTP/1.1-7000]]
+
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1001) ~[tomcat-embed-core-9.0.13.jar:9.0.13]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.13.jar:9.0.13]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-9.0.13.jar:9.0.13]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:311) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:164) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) [spring-context-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at com.miamioh.registertaxiclient.RegisterTaxiClientApplication.main(RegisterTaxiClientApplication.java:10) [classes/:na]
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_201]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_201]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_201]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_201]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_201]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236) ~[tomcat-embed-core-9.0.13.jar:9.0.13]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-9.0.13.jar:9.0.13]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1067) ~[tomcat-embed-core-9.0.13.jar:9.0.13]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1149) ~[tomcat-embed-core-9.0.13.jar:9.0.13]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:561) ~[tomcat-embed-core-9.0.13.jar:9.0.13]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:998) ~[tomcat-embed-core-9.0.13.jar:9.0.13]
+	... 14 common frames omitted
+
+2019-04-09 15:26:30.850  INFO 24217 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-04-09 15:26:30.980  INFO 24217 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-04-09 15:26:30.982 ERROR 24217 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 7000 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 7000, or configure this application to listen on another port.
+
+2019-04-09 15:26:30.992  INFO 24217 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

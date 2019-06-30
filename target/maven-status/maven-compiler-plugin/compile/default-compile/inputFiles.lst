@@ -1,0 +1,6 @@
+/home/silwals/Documents/code/RegisterTaxiClient/src/main/java/com/miamioh/registertaxiclient/service/RequestProducerService.java
+/home/silwals/Documents/code/RegisterTaxiClient/src/main/java/com/miamioh/registertaxiclient/config/params/KafkaProducerConfigParams.java
+/home/silwals/Documents/code/RegisterTaxiClient/src/main/java/com/miamioh/registertaxiclient/RegisterTaxiClientApplication.java
+/home/silwals/Documents/code/RegisterTaxiClient/src/main/java/com/miamioh/registertaxiclient/kafka/producer/RideSharingRequestProducer.java
+/home/silwals/Documents/code/RegisterTaxiClient/src/main/java/com/miamioh/registertaxiclient/model/request/Taxi.java
+/home/silwals/Documents/code/RegisterTaxiClient/src/main/java/com/miamioh/registertaxiclient/config/KafkaProducerConfig.java

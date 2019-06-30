@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.miamioh.RegisterTaxiClient.RegisterTaxiClientApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.249 s <<< FAILURE! - in com.miamioh.RegisterTaxiClient.RegisterTaxiClientApplicationTests
+initializationError(com.miamioh.RegisterTaxiClient.RegisterTaxiClientApplicationTests)  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.IllegalStateException: Unable to find a @SpringBootConfiguration, you need to use @ContextConfiguration or @SpringBootTest(classes=...) with your test
+

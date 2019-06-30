@@ -1,0 +1,8 @@
+com/miamioh/registertaxiclient/service/RequestProducerService$1.class
+com/miamioh/registertaxiclient/config/KafkaProducerConfig.class
+com/miamioh/registertaxiclient/model/request/Taxi.class
+com/miamioh/registertaxiclient/service/RequestProducerService.class
+com/miamioh/registertaxiclient/kafka/producer/RideSharingRequestProducer.class
+com/miamioh/registertaxiclient/config/params/KafkaProducerConfigParams.class
+com/miamioh/registertaxiclient/service/RequestProducerService$2.class
+com/miamioh/registertaxiclient/RegisterTaxiClientApplication.class

@@ -1,6 +1,6 @@
 package com.miamioh.registertaxiclient.service;
 
-import java.util.UUID;
+import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.slf4j.Logger;
@@ -38,7 +38,8 @@ public class RequestProducerService {
 		log.info("Inside Register Taxi Request Producer Service");
 		String[] tokens = input.split(",");
 		Taxi taxi = new Taxi();
-		String taxiId = UUID.randomUUID().toString();
+		//String taxiId = UUID.randomUUID().toString();
+		String taxiId = Integer.toString((new Random()).nextInt(100-10)+100);
 		taxi.setTaxiId(taxiId);
 		taxi.setLatitude(Double.valueOf(tokens[0]));
 		taxi.setLongitude(Double.valueOf(tokens[1]));
